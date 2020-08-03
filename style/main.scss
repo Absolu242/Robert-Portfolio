@@ -1,0 +1,574 @@
+$colorHeader:#095475;
+$colorTextPrimary:#095475;
+$colorTextSecondary:#b5b5b5;
+$colorTextParagraph:#979797;
+$colorBkg:#fdfdfd;
+$fontHeader: 'PlayfairDisplay';
+$fontText:'FiraSans';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+    a{
+        text-decoration: none;
+        color: $colorTextSecondary;
+    }
+}
+
+html{
+    font-size: 10px;
+}
+
+.header{
+
+    width: 100%;
+    padding:20rem 0;
+    position: relative;
+    background-image: url(../images/header.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+
+    
+
+    &__logo{
+        position: relative;
+        padding: 5rem 0;
+
+        img{
+            width: 6rem;
+            height: 3rem;
+        }
+    }
+
+    &__main{
+        position: relative;
+        top: 5rem;
+        
+
+        &__content{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            p{
+                position: relative;
+                color: $colorTextSecondary;
+                font-family: $fontText, sans-serif;
+                font-size: 1.3rem;
+            
+                &.greetings{
+                    text-transform: uppercase;
+                    letter-spacing: 1rem;
+                }
+
+                &.about{
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    width: 50rem;
+                    line-height: 2rem;
+
+                    @media(max-width:768px){
+                        width: 32rem;
+                    }
+                }
+            }
+
+            h1{
+                color: $colorBkg;
+                font-size: 9rem;
+                padding: 1rem;
+                font-family: $fontHeader;
+            }
+        }
+    }
+
+    &__scroll{
+        position: relative;
+        top: 15rem;
+    }
+
+    @media(max-width:768px){
+        padding:8rem 0;
+
+        &__main{
+            top:0;
+        }
+    }
+}
+
+main{
+    position: relative;
+
+    section{
+        position: relative;
+       
+        padding:10rem 0;
+    }
+
+    .skill__card,.contact{
+
+        display: grid;
+        gap:1rem;
+        grid-template-columns:repeat(2,1fr) ;
+        grid-gap: 5rem;
+        align-items: center;
+        padding-bottom: 3rem;
+
+        .line{
+            position: relative;
+            height: 0.4rem;
+            width: 28rem;
+            top: 2.5rem;
+            background-color: $colorHeader;
+        }
+
+
+
+        
+        &>.cardText,&>.contact--left{
+            position: relative;
+            display: flex;
+
+           
+            .top{
+                position: relative;
+                font-size: 5rem;
+                color: $colorTextParagraph;
+
+                span{
+                    color: $colorTextPrimary;
+                }
+
+            }
+
+            h2{
+                font-size: 5rem;
+                color: $colorTextParagraph;
+                text-align: left;
+                
+
+                span{
+                    color: $colorTextPrimary;
+                }
+            }
+
+            p{
+                text-align: left;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                color: $colorTextParagraph;
+                font-family: $fontText, sans-serif;
+                width: 40rem;
+                padding: 2rem 0;
+                
+            }
+        }
+
+        .cardImg{
+            
+            img{
+                width: 60rem;
+                height: 45rem;
+                object-fit: cover;
+            }
+        }
+
+
+        @media(max-width:768px){
+            grid-template-columns:350px ;
+           
+            text-align: center;
+            .line{
+               display: none;
+           
+            }
+
+            &>.cardText{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .top{
+                    font-size: 3.5rem;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  
+                }
+
+                h2{
+                    font-size:3.5rem;
+                    text-align: center;
+                }
+                p{
+                    font-size:1.3rem;
+                    width: 25rem;
+                    text-align: center;
+                }
+            }
+
+            .cardImg{
+            
+                img{
+                    width: 355px;
+                    height: 300px;
+                  
+                }
+            }
+
+        }
+
+    }
+
+    .right{
+
+        .top{
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        
+        @media(max-width:768px){
+            &>.cardText{
+               order:1;
+        
+            }
+
+            .cardImg{
+            order:2;
+            }
+
+        }
+    }
+}
+
+.gallery{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+
+    &__header{
+        text-align: center;
+        font-size: 3rem;
+        font-family: $fontHeader;
+        padding-bottom: 5rem;
+       
+
+        .top{
+            font-size: 5rem;
+            span{
+                color: $colorTextParagraph;
+                border-bottom:2px solid $colorHeader;
+                padding: .8rem 0;
+            }
+            
+        }
+
+        h2{
+            position: relative;
+            top: 1rem;
+            color: $colorHeader;
+
+            span{
+                color: $colorTextParagraph;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width:70%;
+
+        @media(max-width:768px){
+           width: 95%;
+           
+           }
+    }
+
+
+    &__images{
+        width:100%;
+       display: grid;
+       gap:1rem;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows:repeat(4,300px);
+
+       @media(max-width:768px){
+          
+        grid-template-columns: 340px;
+       
+       }
+
+        &--item{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: contain;
+
+            .hover{
+                display: none;
+                position: relative;
+                background-color: #095575cc;
+                color: $colorBkg;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                
+                h3{
+                    position: relative;
+                    font-size: 2rem;
+                    font-family: $fontHeader;
+                    top: 12rem;
+
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-family: $fontText, sans-serif;
+                }
+            }
+
+            &:hover{
+                .hover{
+                    display: block;
+                }
+            }
+        }
+
+        &.wide{
+            grid-columns: 230px;
+        }
+    }
+}    
+
+.thought{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+
+    &__content{
+        position: relative;
+        text-align: center;
+        font-size: 2rem;
+        font-family: $fontHeader;
+        color: $colorHeader;
+        width:70%;
+    }
+
+    span{
+        color: $colorTextParagraph;
+    }
+}
+
+.contact{
+    .contact__card{
+
+        display: grid;
+        gap:1rem;
+        grid-template-columns:repeat(2,1fr) ;
+        grid-gap: 5rem;
+        align-items: center;
+        padding-bottom: 3rem;
+
+        .line{
+            position: relative;
+            height: 0.4rem;
+            width: 28rem;
+            top: 2.5rem;
+            background-color: $colorHeader;
+        }
+
+
+
+        
+        .contact--left{
+            position: relative;
+            display: flex;
+
+           
+            .top{
+                position: relative;
+                font-size: 5rem;
+                color: $colorTextParagraph;
+
+                span{
+                    color: $colorTextPrimary;
+                }
+
+            }
+
+            h2{
+                font-size: 5rem;
+                color: $colorTextParagraph;
+                text-align: left;
+                
+
+                span{
+                    color: $colorTextPrimary;
+                }
+            }
+
+            p{
+                text-align: left;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                color: $colorTextParagraph;
+                font-family: $fontText, sans-serif;
+                width: 40rem;
+                padding: 2rem 0;
+                
+            }
+        }
+       
+        .down{
+            position: relative;
+            text-align: left;
+
+            .content{
+              
+                button{
+                    padding: 2rem 0;
+                    background: none;
+                    font-size: 1rem;
+                    color: $colorHeader;
+                    font-family: $fontText, sans-serif;
+                    text-transform: capitalize;
+                    width: 50%;
+                    border: 1px solid $colorTextParagraph
+                  
+                }
+            }
+        }
+
+        .contact--right{
+
+            display: grid;
+            gap:8rem;
+            grid-template-columns: repeat((2,1fr));
+            grid-auto-rows: 20px;
+            
+
+            .join{
+                position: relative;
+                display: inline;
+                height: 50%;
+                font-size: 1.5rem;
+
+                p{
+                    color: $colorTextParagraph;
+                    font-family: $fontText,sans-serif;
+                    font-weight: 600;
+                }
+
+                h2{
+                    font-family: $fontHeader;
+                    color: $colorHeader;
+
+                    a{
+                        padding:0 .5rem ;
+                        &:hover,:active{
+                            color: $colorHeader;
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        
+        @media(max-width:768px){
+            grid-template-columns:350px ;
+           
+            text-align: center;
+            .line{
+               display: none;
+           
+            }
+
+            &>.contact--left{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .top{
+                    font-size: 3.5rem;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  
+                }
+
+                h2{
+                    font-size:3.5rem;
+                    text-align: center;
+                }
+                p{
+                    font-size:1.3rem;
+                    width: 25rem;
+                    text-align: center;
+                }
+
+                .down{
+                    position: relative;
+                    text-align: center;
+                }
+            }
+
+        }
+       
+    }
+
+  
+}
+
+
+footer{
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        font-size: 1.5rem;
+
+        p{
+            color: $colorTextParagraph;
+            font-family: $fontText,sans-serif;
+            position: relative;
+            margin: 1rem 0;
+            left: 0.5rem;
+        }
+    }
+}

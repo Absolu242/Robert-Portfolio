@@ -1,0 +1,32 @@
+colorHeader:#095475;
+colorTextPrimary:#095475;
+colorTextSecondary:#b5b5b5;
+colorTextParagraph:#979797;
+colorBkg:#fdfdfd;
+
+about1:
+
+title:
+font-family:playfairDisplay bold
+
+Design consultant
+& web superhero
+
+text:
+font-family:firaSans light
+
+The Pacific Railroad is, however, really divided into two distinct lines: the Central Pacific, between San Francisco and Ogden, and the Union Pacific, between Ogden and Omaha. Five main lines connect Omaha with New York
+
+
+about2:
+
+title:
+font-family:playfairDisplay bold
+
+Co-founder of the
+Apple Insider
+
+text:
+font-family:firaSans light
+
+The clothing of both Mr. Fogg and Fix was in rags, as if they had themselves been actively engaged in the contest between Camerfield and Mandiboy. An hour after, they were once more suitably attired, and with Aouda returned to the International Hotel.

@@ -1,0 +1,613 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+* a {
+  text-decoration: none;
+  color: #b5b5b5;
+}
+
+html {
+  font-size: 10px;
+}
+
+.header {
+  width: 100%;
+  padding: 20rem 0;
+  position: relative;
+  background-image: url(../images/header.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.header__logo {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.header__logo img {
+  width: 6rem;
+  height: 3rem;
+}
+
+.header__main {
+  position: relative;
+  top: 5rem;
+}
+
+.header__main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__main__content p {
+  position: relative;
+  color: #b5b5b5;
+  font-family: "FiraSans", sans-serif;
+  font-size: 1.3rem;
+}
+
+.header__main__content p.greetings {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.header__main__content p.about {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50rem;
+  line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  .header__main__content p.about {
+    width: 32rem;
+  }
+}
+
+.header__main__content h1 {
+  color: #fdfdfd;
+  font-size: 9rem;
+  padding: 1rem;
+  font-family: "PlayfairDisplay";
+}
+
+.header__scroll {
+  position: relative;
+  top: 15rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 8rem 0;
+  }
+  .header__main {
+    top: 0;
+  }
+}
+
+main {
+  position: relative;
+}
+
+main section {
+  position: relative;
+  padding: 10rem 0;
+}
+
+main .skill__card, main .contact {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3rem;
+}
+
+main .skill__card .line, main .contact .line {
+  position: relative;
+  height: 0.4rem;
+  width: 28rem;
+  top: 2.5rem;
+  background-color: #095475;
+}
+
+main .skill__card > .cardText, main .skill__card > .contact--left, main .contact > .cardText, main .contact > .contact--left {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .skill__card > .cardText .top, main .skill__card > .contact--left .top, main .contact > .cardText .top, main .contact > .contact--left .top {
+  position: relative;
+  font-size: 5rem;
+  color: #979797;
+}
+
+main .skill__card > .cardText .top span, main .skill__card > .contact--left .top span, main .contact > .cardText .top span, main .contact > .contact--left .top span {
+  color: #095475;
+}
+
+main .skill__card > .cardText h2, main .skill__card > .contact--left h2, main .contact > .cardText h2, main .contact > .contact--left h2 {
+  font-size: 5rem;
+  color: #979797;
+  text-align: left;
+}
+
+main .skill__card > .cardText h2 span, main .skill__card > .contact--left h2 span, main .contact > .cardText h2 span, main .contact > .contact--left h2 span {
+  color: #095475;
+}
+
+main .skill__card > .cardText p, main .skill__card > .contact--left p, main .contact > .cardText p, main .contact > .contact--left p {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #979797;
+  font-family: "FiraSans", sans-serif;
+  width: 40rem;
+  padding: 2rem 0;
+}
+
+main .skill__card .cardImg img, main .contact .cardImg img {
+  width: 60rem;
+  height: 45rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  main .skill__card, main .contact {
+    -ms-grid-columns: 350px;
+        grid-template-columns: 350px;
+    text-align: center;
+  }
+  main .skill__card .line, main .contact .line {
+    display: none;
+  }
+  main .skill__card > .cardText, main .contact > .cardText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .skill__card > .cardText .top, main .contact > .cardText .top {
+    font-size: 3.5rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .skill__card > .cardText h2, main .contact > .cardText h2 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  main .skill__card > .cardText p, main .contact > .cardText p {
+    font-size: 1.3rem;
+    width: 25rem;
+    text-align: center;
+  }
+  main .skill__card .cardImg img, main .contact .cardImg img {
+    width: 355px;
+    height: 300px;
+  }
+}
+
+main .right .top {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  main .right > .cardText {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  main .right .cardImg {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.gallery {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gallery__header {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "PlayfairDisplay";
+  padding-bottom: 5rem;
+}
+
+.gallery__header .top {
+  font-size: 5rem;
+}
+
+.gallery__header .top span {
+  color: #979797;
+  border-bottom: 2px solid #095475;
+  padding: .8rem 0;
+}
+
+.gallery__header h2 {
+  position: relative;
+  top: 1rem;
+  color: #095475;
+}
+
+.gallery__header h2 span {
+  color: #979797;
+  text-decoration: line-through;
+}
+
+.gallery__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .gallery__content {
+    width: 95%;
+  }
+}
+
+.gallery__images {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (300px)[4];
+      grid-template-rows: repeat(4, 300px);
+}
+
+@media (max-width: 768px) {
+  .gallery__images {
+    -ms-grid-columns: 340px;
+        grid-template-columns: 340px;
+  }
+}
+
+.gallery__images--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.gallery__images--item .hover {
+  display: none;
+  position: relative;
+  background-color: #095575cc;
+  color: #fdfdfd;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery__images--item .hover h3 {
+  position: relative;
+  font-size: 2rem;
+  font-family: "PlayfairDisplay";
+  top: 12rem;
+}
+
+.gallery__images--item .hover p {
+  font-size: 1.5rem;
+  font-family: "FiraSans", sans-serif;
+}
+
+.gallery__images--item:hover .hover {
+  display: block;
+}
+
+.gallery__images.wide {
+  grid-columns: 230px;
+}
+
+.thought {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.thought__content {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "PlayfairDisplay";
+  color: #095475;
+  width: 70%;
+}
+
+.thought span {
+  color: #979797;
+}
+
+.contact .contact__card {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3rem;
+}
+
+.contact .contact__card .line {
+  position: relative;
+  height: 0.4rem;
+  width: 28rem;
+  top: 2.5rem;
+  background-color: #095475;
+}
+
+.contact .contact__card .contact--left {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact__card .contact--left .top {
+  position: relative;
+  font-size: 5rem;
+  color: #979797;
+}
+
+.contact .contact__card .contact--left .top span {
+  color: #095475;
+}
+
+.contact .contact__card .contact--left h2 {
+  font-size: 5rem;
+  color: #979797;
+  text-align: left;
+}
+
+.contact .contact__card .contact--left h2 span {
+  color: #095475;
+}
+
+.contact .contact__card .contact--left p {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #979797;
+  font-family: "FiraSans", sans-serif;
+  width: 40rem;
+  padding: 2rem 0;
+}
+
+.contact .contact__card .down {
+  position: relative;
+  text-align: left;
+}
+
+.contact .contact__card .down .content button {
+  padding: 2rem 0;
+  background: none;
+  font-size: 1rem;
+  color: #095475;
+  font-family: "FiraSans", sans-serif;
+  text-transform: capitalize;
+  width: 50%;
+  border: 1px solid #979797;
+}
+
+.contact .contact__card .contact--right {
+  display: -ms-grid;
+  display: grid;
+  gap: 8rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 20px;
+}
+
+.contact .contact__card .contact--right .join {
+  position: relative;
+  display: inline;
+  height: 50%;
+  font-size: 1.5rem;
+}
+
+.contact .contact__card .contact--right .join p {
+  color: #979797;
+  font-family: "FiraSans", sans-serif;
+  font-weight: 600;
+}
+
+.contact .contact__card .contact--right .join h2 {
+  font-family: "PlayfairDisplay";
+  color: #095475;
+}
+
+.contact .contact__card .contact--right .join h2 a {
+  padding: 0 .5rem;
+}
+
+.contact .contact__card .contact--right .join h2 a:hover, .contact .contact__card .contact--right .join h2 a :active {
+  color: #095475;
+}
+
+@media (max-width: 768px) {
+  .contact .contact__card {
+    -ms-grid-columns: 350px;
+        grid-template-columns: 350px;
+    text-align: center;
+  }
+  .contact .contact__card .line {
+    display: none;
+  }
+  .contact .contact__card > .contact--left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .contact__card > .contact--left .top {
+    font-size: 3.5rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .contact__card > .contact--left h2 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .contact .contact__card > .contact--left p {
+    font-size: 1.3rem;
+    width: 25rem;
+    text-align: center;
+  }
+  .contact .contact__card > .contact--left .down {
+    position: relative;
+    text-align: center;
+  }
+}
+
+footer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+  font-size: 1.5rem;
+}
+
+footer .info p {
+  color: #979797;
+  font-family: "FiraSans", sans-serif;
+  position: relative;
+  margin: 1rem 0;
+  left: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */
