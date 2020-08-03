@@ -107,7 +107,10 @@ main{
 
     section{
         position: relative;
-       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding:10rem 0;
     }
 
@@ -208,7 +211,7 @@ main{
                 }
                 p{
                     font-size:1.3rem;
-                    width: 25rem;
+                    width:35rem;
                     text-align: center;
                 }
             }
@@ -253,9 +256,10 @@ main{
     
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
   
 
     &__header{
@@ -264,6 +268,10 @@ main{
         font-family: $fontHeader;
         padding-bottom: 5rem;
        
+        @media(max-width:768px){
+            font-size: 2rem;
+        }
+
 
         .top{
             font-size: 5rem;
@@ -295,22 +303,22 @@ main{
         width:70%;
 
         @media(max-width:768px){
-           width: 95%;
+           width: 100%;
            
            }
     }
 
 
     &__images{
-        width:100%;
+        width:80%;
        display: grid;
        gap:1rem;
        grid-template-columns: repeat(2,1fr);
        grid-template-rows:repeat(4,300px);
-
+     
        @media(max-width:768px){
           
-        grid-template-columns: 340px;
+        grid-template-columns: 1fr;
        
        }
 

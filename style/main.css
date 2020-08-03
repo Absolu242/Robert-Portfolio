@@ -111,6 +111,19 @@ main {
 
 main section {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10rem 0;
 }
 
@@ -218,7 +231,7 @@ main .skill__card .cardImg img, main .contact .cardImg img {
   }
   main .skill__card > .cardText p, main .contact > .cardText p {
     font-size: 1.3rem;
-    width: 25rem;
+    width: 35rem;
     text-align: center;
   }
   main .skill__card .cardImg img, main .contact .cardImg img {
@@ -255,16 +268,16 @@ main .right .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gallery__header {
@@ -272,6 +285,12 @@ main .right .top {
   font-size: 3rem;
   font-family: "PlayfairDisplay";
   padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .gallery__header {
+    font-size: 2rem;
+  }
 }
 
 .gallery__header .top {
@@ -314,12 +333,12 @@ main .right .top {
 
 @media (max-width: 768px) {
   .gallery__content {
-    width: 95%;
+    width: 100%;
   }
 }
 
 .gallery__images {
-  width: 100%;
+  width: 80%;
   display: -ms-grid;
   display: grid;
   gap: 1rem;
@@ -331,8 +350,8 @@ main .right .top {
 
 @media (max-width: 768px) {
   .gallery__images {
-    -ms-grid-columns: 340px;
-        grid-template-columns: 340px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
